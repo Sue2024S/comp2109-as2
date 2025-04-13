@@ -1,0 +1,63 @@
+/* 
+Theme Name: Custom Theme - Assignment 2
+Author: Susan Soto
+Description: This is my assignment two theme
+Requires at least: 5.9
+Tested up to: 6.4
+Requires PHP: 5.6
+Version: 1.00
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  font-family: 'Montserrat', sans-serif;  
+  padding: 20px;  
+}
+
+/* header */
+header {
+  background-color: #6563f39c;
+  color: #07686b;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 100px;
+  height: auto;
+}
+
+nav {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+background-color: #6563f39c;
+}
+
+/* main */
+h1{
+  font-size: 3em;
+}
+
+h2, h3 {
+  font-family: "Domine", serif;
+  font-size: 2em;
+}
+
+.home-intro-row  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.text-column {
+  flex: 1;
+  text-align: center;
+}
