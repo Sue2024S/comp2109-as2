@@ -21,6 +21,9 @@ header {
   background-color: #6563f39c;
   color: #07686b;
   display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100px;
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
