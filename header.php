@@ -15,7 +15,7 @@
     <header class="default-header">
         <div class="logo">
             <a href="<?php echo esc_url(home_url()); ?>">
-                <img src="<?php echo esc_url(home_url('wp-content/uploads/2025/as1/logo.png'))?>" alt="header logo">
+                <img src="<?php echo esc_url(home_url('wp-content/uploads/2025/as2/logo.png'))?>" alt="header logo">
             </a>
         </div>
         <nav>
