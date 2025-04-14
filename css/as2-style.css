@@ -12,21 +12,41 @@ Version: 1.00
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
-  font-family: 'Montserrat', sans-serif;  
-  padding: 20px;  
+  font-family: "Montserrat", sans-serif;  
+}
+
+/* body */
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  padding: 90px 50px 0px 50px;
+  display: block;
 }
 
 /* header */
+.default-header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
 header {
-  background-color: #6563f39c;
-  color: #07686b;
+  background-color: #7fccc88e;
+  /* color: #e98a1d;
   display: flex;
   position: fixed;
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: auto;
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000; */
 }
 
 header .logo img {
@@ -34,13 +54,45 @@ header .logo img {
   height: auto;
 }
 
+header > div,
+.menu-assignment2-container {
+  margin: 40px;
+}
+
 nav {
 display: flex;
 list-style: none;
-margin: 0;
+margin: 30px;
 padding: 0;
-background-color: #6563f39c;
+/* background-color: #6563f39c; */
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.menu {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fa2879fa;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #e98a1d;
+  color: #fff;
+  border-radius: 5px;
+}
+
 
 /* main */
 h1{
@@ -63,4 +115,95 @@ h2, h3 {
 .text-column {
   flex: 1;
   text-align: center;
+}
+
+main {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* masthead */
+
+.post-masthead {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  padding-top: 70px;
+}
+
+/* homepage-template */
+.home-search {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-masthead {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.home-featured {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.recommended-book,
+.latest-posts {
+  flex: 1;
+}
+
+.latest-post article {
+  margin-bottom: 20px;
+}
+
+.home-subscribe {
+  background: #f2f2f2;
+  padding: 30px;
+  text-align: center;
+}
+
+.home-products {
+  padding: 40px;
+  background: #e8f5f2;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 20px;
+  background: #7fccc88e;
+  color: #fff;
+}
+
+.top-footer {
+  display: flex; /* key change */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* optional, helps on smaller screens */
+  gap: 20px;
+  padding: 20px;
+  background-color: #7fccc88e;
+}
+
+.first-widget,
+.second-widget,
+.third-widget,
+.fourth-widget {
+  flex: 1;
+  min-width: 200px; /* adjust as needed */
+}
+
+.menu-main-container,
+.widget_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -62,8 +62,8 @@ function cms_plugin_init(){
         'taxonomies'       => array('category'),
         'hierarchical'     => false,
         //check where the menu icons are located
-        'menu_icon'        => 'dashicons-admin-site',
-        'query_var'        => true,
+        'menu_icon'        => 'dashicons-album',
+        // 'query_var'        => true,
         'supports'         => array(
             'title',
             'editor',
@@ -92,16 +92,17 @@ function cms_posttype_shortcode(){
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
             </div>
             <div>
-                <h4><?php the_title(); ?></h4>
+                <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
-                <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+                <p><a href="<?php the_permalink(); ?>">More...</a></p>
             </div>
         </div>
             
-            <?php endwhile;
-    }
+<?php 
         wp_reset_postdata();
         return ob_get_clean();
+        endwhile;
+    }
 //}
 //register shortcode
 add_shortcode('cms_posttype', 'cms_posttype_shortcode');
@@ -112,9 +113,7 @@ function customtheme_add_woocommerce_support() {
 }
 add_action('after_setup_theme', 'customtheme_add_woocommerce_support');
 
-function enqueue_wc_cart_fragments(){
-    wp_enqueue_script('wc-cart-fragments');
-}
+function enqueue_wc_cart_fragments(){ wp_enqueue_script('wc-cart-fragments');}
 add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments');
 
 // 'woocommerce_single_product_summary' it is like a category
@@ -143,6 +142,9 @@ remove_action('woocommerce_single_variation', 'woocommerce_single_variation', 10
 
 /* Removes all the single product metadata, example SKU */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+/* Removes the product  */
+remove_action('template_redirect', 'wc_redirect_empty_cart_checkout');
 
 // change the order in which the information is displayed
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 10 );

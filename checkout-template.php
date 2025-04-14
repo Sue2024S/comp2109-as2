@@ -5,11 +5,11 @@
  */
 get_header();
 ?>
-<section>
-    <?php
-    echo do_shortcode('[woocommerce_checkout]'); 
-    ?>
-</section>
+    <section>
+        <?php
+        echo do_shortcode('[woocommerce_checkout]'); 
+        ?>
+    </section>
 <?php
 get_footer();   
 ?>

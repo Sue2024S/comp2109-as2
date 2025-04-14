@@ -4,11 +4,7 @@
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
-        <!-- add JS -->
-        <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha"></script> -->
-        <!-- add custom CSS file -->
          <link rel="stylesheet" href="<?php echo esc_url( home_url('wp-content/themes/customtheme-as2/css/as2-style.css')); ?>">
-        <!-- add custom font  -->
     </head>
 
     <body <?php body_class(); ?>>
